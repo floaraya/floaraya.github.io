@@ -14,7 +14,7 @@ export function Contact() {
     calendly: language === "es" ? "Agendar llamada" : "Book a call",
   };
 
-  const calendlyUrl = "https://calendly.com/flo-araya";
+  const calendlyUrl = "https://calendly.com/floah-marketing/30min";
 
   return (
     <section id="contacto" className="bg-surface py-20 sm:py-28">
@@ -62,7 +62,7 @@ export function Contact() {
             </div>
             <div className="text-left">
               <p className="text-sm font-medium text-card-foreground">{labels.calendly}</p>
-              <p className="text-xs text-muted-foreground">calendly.com/flo-araya</p>
+              <p className="text-xs text-muted-foreground">calendly.com/floah-marketing</p>
             </div>
           </a>
 

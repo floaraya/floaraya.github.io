@@ -2,16 +2,10 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
-import { tanstackStart } from "@tanstack/react-start/plugin/vite";
-import "@tanstack/react-start/server-only";
-import "@tanstack/react-start/client-only";
+import { resolve } from "path";
 
 export default defineConfig({
   plugins: [
-    tanstackStart({
-      ssr: false,
-      clientEntry: "src/client.tsx",
-    }),
     react(),
     tailwindcss(),
     tsConfigPaths(),
@@ -19,6 +13,11 @@ export default defineConfig({
   base: "/floaraya.github.io/",
   build: {
     outDir: "dist",
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+      },
+    },
   },
   server: {
     port: 3000,

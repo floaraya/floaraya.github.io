@@ -5,34 +5,19 @@ import fs from "fs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const clientDist = resolve(__dirname, "dist", "client");
 const rootDist = resolve(__dirname, "dist");
 
-const assetsDir = resolve(clientDist, "assets");
+const assetsDir = resolve(rootDist, "assets");
 const files = fs.readdirSync(assetsDir);
-const jsFile = files.find(f => f.startsWith("index-") && f.endsWith(".js"));
+const jsFile = files.find(f => f.endsWith(".js") && !f.endsWith(".css"));
 const cssFile = files.find(f => f.endsWith(".css"));
 
-const imagesDir = resolve(clientDist, "images");
+const imagesDir = resolve(rootDist, "images");
 let imgFile = null;
 if (fs.existsSync(imagesDir)) {
   const imgFiles = fs.readdirSync(imagesDir);
   imgFile = imgFiles[0];
 }
-
-// Copy client to root
-const copyDir = (src, dest) => {
-  if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
-  for (const f of fs.readdirSync(src)) {
-    const srcPath = resolve(src, f);
-    const destPath = resolve(dest, f);
-    fs.statSync(srcPath).isDirectory() 
-      ? copyDir(srcPath, destPath) 
-      : fs.copyFileSync(srcPath, destPath);
-  }
-};
-
-copyDir(clientDist, rootDist);
 
 // Generate correct HTML
 const html = `<!DOCTYPE html>

@@ -7,6 +7,7 @@ export function Hero() {
   const heroTitle = t.hero?.titulo || "B2B Strategies that generate results";
   const heroSubtitle = t.hero?.subtitulo || "I help you build clear messages that connect with your audience and accelerate your business growth.";
   const heroCta = t.hero?.cta || "View services";
+  const heroBadge = t.hero?.badge || "B2B Marketing · Research · Digital Strategy";
 
   return (
     <section
@@ -25,10 +26,10 @@ export function Hero() {
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
-            <Sparkles className="h-3.5 w-3.5 text-primary" />
-            Marketing B2B · Research · Estrategia digital
-          </span>
+<span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
+              <Sparkles className="h-3.5 w-3.5 text-primary" />
+              {heroBadge}
+            </span>
 
           <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
             {heroTitle}

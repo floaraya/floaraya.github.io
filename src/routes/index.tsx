@@ -11,13 +11,13 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Flora Araya · Marketing B2B & Research Estratégico" },
+      { title: "Flo Araya · Marketing B2B & Research Estratégico" },
       {
         name: "description",
         content:
           "Especialista en Marketing B2B y Research. Investigación de mercados, contenidos B2B, Google Ads y automatización con Zoho CRM.",
       },
-      { property: "og:title", content: "Flora Araya · Marketing B2B & Research" },
+      { property: "og:title", content: "Flo Araya · Marketing B2B & Research" },
       {
         property: "og:description",
         content:
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Flora Araya · Marketing B2B" },
+      { name: "twitter:title", content: "Flo Araya · Marketing B2B" },
       {
         name: "twitter:description",
         content:

@@ -74,7 +74,7 @@ export function Navbar() {
           <span className="grid h-8 w-8 place-items-center rounded-lg bg-[image:var(--gradient-primary)] text-primary-foreground">
             FA
           </span>
-          <span className="hidden sm:inline">Flora Araya</span>
+          <span className="hidden sm:inline">Flo Araya</span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">

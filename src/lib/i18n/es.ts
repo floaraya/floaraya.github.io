@@ -11,6 +11,7 @@ export const es = {
     titulo: "Estrategias B2B que generan resultados",
     subtitulo: "Te ayudo a construir mensajes claros que conectan con tu audiencia y aceleran el crecimiento de tu negocio.",
     cta: "Ver servicios",
+    badge: "Marketing B2B · Research · Estrategia digital",
   },
   servicios: {
     titulo: "Servicios",

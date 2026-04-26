@@ -8,7 +8,10 @@ import "@tanstack/react-start/client-only";
 
 export default defineConfig({
   plugins: [
-    tanstackStart(),
+    tanstackStart({
+      ssr: false,
+      clientEntry: "src/client.tsx",
+    }),
     react(),
     tailwindcss(),
     tsConfigPaths(),
